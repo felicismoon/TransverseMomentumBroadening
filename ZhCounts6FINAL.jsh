@@ -1,14 +1,3 @@
-// this is the 6 graphs code from ZhCounts8.2 with the general code improvements from ZhCounts 6.3 -- basically ZhCounts8.2 with code fixed
-
-// this is basiclally the same as 8.2 except I created variables for the graph parameters (like pT_lower, etc)
-
-// to do: I could maybe create more variables for the graph points (like the 12, etc)
- 
-// I created algoritihm code stuff for getting the differences for the elements in 9.2 but it's not that important to do
-
-
-// commented out the ugly vec stuff
-
 import org.jlab.jnp.hipo4.data.*;
 import org.jlab.jnp.hipo4.data.*;
 import org.jlab.jnp.hipo4.io.*;
@@ -469,56 +458,9 @@ int[] treeTarget = {0, 1, 0, 1, 0, 1};
 
 int[] entriesArray = {entries1, entries1, entries2, entries2, entries3, entries3};
 
-// !!!!!!!!!!!!!!! make this into an array?
 
 
-/*
-vecArray[6] = vec6;
-vecArray[7] = vec7;
-vecArray[8] = vec8;
-vecArray[9] = vec9;
-vecArray[10] = vec10;
-vecArray[11] = vec11;
 
-
-vecArray[12] = vec12;
-vecArray[13] = vec13;
-vecArray[14] = vec14;
-vecArray[15] = vec15;
-vecArray[16] = vec16;
-vecArray[17] = vec17;
-
-
-vecArray[18] = vec18;
-vecArray[19] = vec19;
-vecArray[20] = vec20;
-vecArray[21] = vec21;
-vecArray[22] = vec22;
-vecArray[23] = vec23;
-
-
-vecArray[24] = vec24;
-vecArray[25] = vec25;
-vecArray[26] = vec26;
-vecArray[27] = vec27;
-vecArray[28] = vec28;
-vecArray[29] = vec29;
-
-vecArray[30] = vec30;
-vecArray[31] = vec31;
-vecArray[32] = vec32;
-vecArray[33] = vec33;
-vecArray[34] = vec34;
-vecArray[35] = vec35;
-
-vecArray[36] = vec36;
-vecArray[37] = vec37;
-vecArray[38] = vec38;
-vecArray[39] = vec39;
-vecArray[40] = vec40;
-vecArray[41] = vec41;
-
-*/
 
 for (int i = 0; i < 6; i++) {
 	treeNumber[i].reset();
@@ -533,7 +475,7 @@ for (int i = 0; i < 6; i++) {
 	treeNumber[i].reset();
 	vecArray[6*i+9] = treeNumber[i].getDataVectors("pT2","pFidCut==1&&eFidCut==1&&iTgt=="+treeTarget[i]+"&&zh>"+finalBinNum3Array[i]+"&&zh<"+finalBinNum4Array[i],entriesArray[i]);
 
-// 
+
 	treeNumber[i].reset();
 	vecArray[6*i+10] = treeNumber[i].getDataVectors("pT2","pFidCut==1&&eFidCut==1&&iTgt=="+treeTarget[i]+"&&zh>"+finalBinNum4Array[i]+"&&zh<"+finalBinNum5Array[i],entriesArray[i]);
 
@@ -562,16 +504,6 @@ for (int i = 0; i < 42; i++) {
 }
 
 
-/*
-double[] histyIntegral = new double[42];
-for (int i = 0; i < 42; i++) {   
-	histyIntegral[i] = histyArray[i].getIntegral();
-	System.out.println("number " + i + " " + histyIntegral[i]);
-}
-
-*/
-
-// meaning of deut higher than heavy target?
 
 
 double carbon_differencebin1 = histyMean[6]-histyMean[12]; 
@@ -753,39 +685,26 @@ dir.cd(dirname);
 
 
 
-//F1D func = new F1D("func","[a]+[b]*x", 0, 210);
-//DataFitter.fit(func, graph, "Q");
+
 F1D func1 = new F1D("func1","[a]+[b]*x+[c]*x*x", 0, 210);
 DataFitter.fit(func1, graph, "Q");
-//func.setLineColor(6);
-//func.setLineWidth(3);
 func1.setLineColor(7);
 func1.setLineWidth(3);
 
-//F1D func2 = new F1D("func2","[a]+[b]*x", 0, 210);
-//DataFitter.fit(func2, graph1, "Q");
+
 F1D func3 = new F1D("func3","[a]+[b]*x+[c]*x*x", 0, 210);
 DataFitter.fit(func3, graph1, "Q");
-//func2.setLineColor(6);
-//func2.setLineWidth(3);
 func3.setLineColor(7);
 func3.setLineWidth(3);
 
-//F1D func4 = new F1D("func4","[a]+[b]*x", 0, 210);
-//DataFitter.fit(func4, graph2, "Q");
 F1D func5 = new F1D("func5","[a]+[b]*x+[c]*x*x", 0, 210);
 DataFitter.fit(func5, graph2, "Q");
-//func4.setLineColor(6);
-//func4.setLineWidth(3);
 func5.setLineColor(7);
 func5.setLineWidth(3);
 
-//F1D func6 = new F1D("func6","[a]+[b]*x", 0, 210);
-//DataFitter.fit(func6, graph3, "Q");
+
 F1D func7 = new F1D("func7","[a]+[b]*x+[c]*x*x", 0, 210);
 DataFitter.fit(func7, graph3, "Q");
-//func6.setLineColor(6);
-//func6.setLineWidth(3);
 func7.setLineColor(7);
 func7.setLineWidth(3);
 
@@ -804,8 +723,8 @@ func11.setLineWidth(3);
 
 int c1a_title_size = 30;
 TCanvas c1 = new TCanvas("c1",800,800);
-// number columns number rows
-c1.divide(3,2); 
+
+c1.divide(3,2); // number columns number rows
 
 
 
@@ -813,35 +732,25 @@ c1.draw(graph3);
 c1.draw(func7, "same");
 
 c1.cd(1);
-//c1.draw(histyArray[2]);
-//dir.addDataSet(histyArray[2]);
 c1.draw(graph);
 c1.draw(func1, "same");
 
 c1.cd(2);
-//c1.draw(histyArray[2]);
-//dir.addDataSet(histyArray[2]);
 c1.draw(graph1);
 c1.draw(func3, "same");
 
 
 c1.cd(3);
-//c1.draw(histyArray[2]);
-//dir.addDataSet(histyArray[2]);
 c1.draw(graph2);
 c1.draw(func5, "same");
 
 
 c1.cd(4);
-//c1.draw(histyArray[2]);
-//dir.addDataSet(histyArray[2]);
 c1.draw(graph4);
 c1.draw(func9, "same");
 
 
 c1.cd(5);
-//c1.draw(histyArray[2]);
-//dir.addDataSet(histyArray[2]);
 c1.draw(graph5);
 c1.draw(func11, "same");
 
