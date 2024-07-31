@@ -12,6 +12,7 @@ import org.jlab.groot.fitter.DataFitter;
 import org.jlab.groot.math.*;
 import java.lang.Math;
 
+
 int maxEvents = -1;
 String fileName1 = "ntuple_C_NposCOPY.hipo"; 
 String fileName2 = "ntuple_Fe_NposCOPY.hipo"; 
