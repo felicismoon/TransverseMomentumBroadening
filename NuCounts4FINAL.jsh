@@ -20,7 +20,6 @@ String fileName2 = "ntuple_Fe_NposCOPY.hipo"; // fixed
 String fileName3 = "ntuple_Pb_NposCOPY.hipo"; // fixed
 
 
-
 TreeHipo tree1 = new TreeHipo(fileName1,"protonTree::tree"); 
 int entries1 = tree1.getEntries();   
 System.out.println(" ENTRIES = " + entries1);  
