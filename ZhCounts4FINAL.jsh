@@ -1,7 +1,3 @@
-// this has the code for ZhCounts6 but is massively improved!!!
-
-// this is 6.2 with the ranges fixed 
-
 // this creates 4 graphs with equal bins of Zh
 import org.jlab.jnp.hipo4.data.*;
 import org.jlab.jnp.hipo4.data.*;
@@ -345,9 +341,6 @@ for (int i = 0; i < 30; i++) {
 }
 
 
-
-
-// meaning of deut higher than heavy target?
 
 
 double carbon_differencebin1 = histyMean[6]-histyMean[10]; 
