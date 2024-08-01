@@ -1,12 +1,12 @@
-These projects study the transverse momentum broadening of protons in a CLAS6 experiment. All of these projects read 3 ntuple HIPO files for Carbon, Iron, and Lead data. 
+**These projects study the transverse momentum broadening of protons in a CLAS6 experiment. All of these projects read 3 ntuple HIPO files for Carbon, Iron, and Lead data.**
 
-NuCounts4FINAL.jsh: This project creates 4 graphs of ΔpT² vs. Atomic Number for 4 equal bins of the nu data. The first bin contains 1/4 of the data with the lowest values of nu and the last bin contains 1/4 of the data with the highest values of nu. 
+**NuCounts4FINAL.jsh**: This project creates 4 graphs of ΔpT² vs. Atomic Number for 4 equal bins of the nu data. The first bin contains 1/4 of the data with the lowest values of nu and the last bin contains 1/4 of the data with the highest values of nu. 
 
-NuVspT2FINAL.jsh: This project creates 3 graphs of ΔpT² vs. nu for each of the 3 elements studied. 
+**NuVspT2FINAL.jsh**: This project creates 3 graphs of ΔpT² vs. nu for each of the 3 elements studied. 
 
-Q2Counts4FINAL.jsh: This project creates 4 graphs of ΔpT² vs. Atomic Number for 4 equal bins of the Q² data. The first bin contains 1/4 of the data with the lowest values of Q² and the last bin contains 1/4 of the data with the highest values of Q². 
+**Q2Counts4FINAL.jsh**: This project creates 4 graphs of ΔpT² vs. Atomic Number for 4 equal bins of the Q² data. The first bin contains 1/4 of the data with the lowest values of Q² and the last bin contains 1/4 of the data with the highest values of Q². 
 
-Q2VspT2FINAL.jsh: This project creates 3 graphs of ΔpT² vs. Q² for each of the 3 elements studied. 
+**Q2VspT2FINAL.jsh**: This project creates 3 graphs of ΔpT² vs. Q² for each of the 3 elements studied. 
 
 ZhCounts4FINAL.jsh: This project creates 4 graphs of ΔpT² vs. Atomic Number for 4 equal bins of the zh data. The first bin contains 1/4 of the data with the lowest values of zh and the last bin contains 1/4 of the data with the highest values of zh. 
 
